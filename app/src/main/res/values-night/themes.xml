@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MeloSphere" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <item name="android:navigationBarColor">#000</item>
+         <item name="colorPrimary">#000</item>
+    </style>
+    <style name="datePickerTheme">
+        <item name="fontFamily">@font/inter_bold</item>
+    </style>
+</resources>

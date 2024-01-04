@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    tools:context=".PhoneFragment">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp"
+        android:id="@+id/backPhone"
+        android:src="@drawable/baseline_arrow_back_24"
+        />
+
+    <TextView
+        android:id="@+id/PhoneText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="100dp"
+        android:text="Enter phone number"
+        android:fontFamily="@font/inter_bold"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        />
+
+    <com.hbb20.CountryCodePicker
+        app:ccp_defaultNameCode="IND"
+        android:id="@+id/country_code"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_showFlag="false"
+        app:ccp_showNameCode="true"
+        app:ccp_showFullName="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneText"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:ccpDialog_backgroundColor="@color/white"
+        android:background="@drawable/input_edit_text"
+        app:ccp_contentColor="@color/white"
+        app:ccp_arrowColor="@color/white"
+        android:padding="10dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_marginTop="45dp"
+            />
+
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/input_edit_text"
+            android:fontFamily="@font/inter_light"
+            android:hint="Phone Number"
+            android:inputType="number"
+            android:maxLength="10"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:textColorHint="#ced4da"
+            android:textCursorDrawable="@null"
+            android:textSize="20dp" />
+    </com.hbb20.CountryCodePicker>
+
+    <TextView
+        android:id="@+id/numberWarning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/country_code"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="We'll send you a code by SMS to confirm your phone number."
+        android:textSize="13dp"
+        android:fontFamily="@font/inter_semibold"
+        android:textColor="@color/white"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextToOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/country_code"
+        android:layout_marginTop="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/solid_button"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:fontFamily="@font/inter_semibold"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

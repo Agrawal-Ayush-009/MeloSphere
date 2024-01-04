@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".OTPFragment"
+    >
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:id="@+id/backOTP"
+        />
+
+    <TextView
+        android:id="@+id/headText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="100dp"
+        android:text="Enter your code"
+        android:fontFamily="@font/inter_bold"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        />
+
+    <com.chaos.view.PinView
+        android:id="@+id/inputText3"
+        app:itemCount="6"
+        app:itemWidth="35dp"
+        app:itemHeight="50dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:itemBackground="@drawable/input_edit_text"
+        android:layout_gravity="center"
+        android:inputType="number"
+        android:cursorVisible="true"
+        app:hideLineWhenFilled="true"
+        android:defaultFocusHighlightEnabled="true"
+        app:itemSpacing="18dp"
+        app:itemRadius="5dp"
+        style="@style/PinWidget.PinView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/headText"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We sent an SMS with a 6-digit code to\n+919870804246."
+        app:layout_constraintTop_toBottomOf="@id/inputText3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        android:fontFamily="@font/inter_semibold"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        app:layout_constraintTop_toBottomOf="@id/inputText3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/solid_button"
+        android:fontFamily="@font/inter_bold"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/resendSMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend SMS"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/next"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:fontFamily="@font/inter_light"
+        android:layout_marginTop="30dp"
+        android:paddingBottom="5dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/outline_message_24"
+        app:layout_constraintRight_toLeftOf="@id/resendSMS"
+        app:layout_constraintTop_toTopOf="@+id/resendSMS"
+        app:layout_constraintBottom_toBottomOf="@id/resendSMS"
+        android:layout_marginRight="10dp"
+        />
+
+
+    <TextView
+        android:id="@+id/EditPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit phone number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resendSMS"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:fontFamily="@font/inter_light"
+        android:layout_marginTop="30dp"
+        android:paddingBottom="5dp"
+        />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/vector_pen"
+        app:layout_constraintRight_toLeftOf="@id/EditPhoneNumber"
+        app:layout_constraintTop_toTopOf="@+id/EditPhoneNumber"
+        app:layout_constraintBottom_toBottomOf="@id/EditPhoneNumber"
+        android:layout_marginRight="10dp"
+        />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

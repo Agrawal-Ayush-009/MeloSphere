@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MeloSphere" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">#000</item>
+        <item name="android:navigationBarColor">#000</item>
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+<!--        <item name="android:windowTranslucentNavigation">true</item>-->
+    </style>
+
+    <style name="Theme.MeloSphere" parent="Base.Theme.MeloSphere" >
+        <item name="colorPrimary">#000</item>
+        <item name="fontFamily">@font/inter_semibold</item>
+    </style>
+
+    <style name="datePickerTheme">
+        <item name="fontFamily">@font/inter_bold</item>
+    </style>
+</resources>
